@@ -1,5 +1,7 @@
 <script lang="ts" setup>
     import Intestazione from "@/components/elements/Intestazione.vue"
+    import { ref } from "vue";
+    const isActive = ref(false);
 </script>
 
 <template>
@@ -8,9 +10,12 @@
         <div class="item-color-theme bg-black-70">20</div>  -->
 
         <div class="container-color-theme flex f-row gap-s">
-            <button class="btn-default btn-red-primary">ciao</button>
-            <button class="btn-default btn-blue-secondary">ciao</button>
-            <button class="btn-default btn-green-tertiary">ciao</button>
+            <form class="go-bottom">
+                <div>
+                    <input id="name" name="name" type="text" required>
+                    <label for="name">Your Name</label>
+                </div>
+            </form>
         </div>
         <!-- <div class="container-color-theme c-flex flex-column  gap-0_3">
             <div class="item-color-theme bg-black-10">10</div>
@@ -109,7 +114,7 @@
     </div>
 </template>
 
-<style setup>
+<style setup lang="scss">
 
     .item-color-theme {
         padding: 1.2rem 3rem;
@@ -119,6 +124,68 @@
         text-align: center;
     }
 
+    form {
+        > div {
+            position: relative;
+            overflow: hidden;
+        }
+        input {
+            width: 100%;
+            border: 2px solid gray; 
+            background: none;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            padding: 8px 12px;
+            outline: 0;
+
+           /*  &:valid {
+            // Hides the label
+                background: white; 
+            } */
+            &:focus {
+                border-color: #f06d06;
+            }
+            &:focus + label {
+                background: #f06d06;
+                color: white;
+                font-size: 70%;
+                padding: 1px 6px;
+                z-index: 2;
+                text-transform: uppercase;
+            }
+        }
+
+        label {
+            position: absolute;
+            color: #999;
+            padding: 7px 6px;
+        }
+   
+    }
+
+    form.go-bottom {
+        input {
+            padding: 12px 12px 12px 12px; 
+        }
+
+        label {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        input:focus {
+            padding: 4px 6px 20px 6px; 
+        }
+        
+        input:focus + label {
+            top: 100%;
+            margin-top: -16px;
+        }
+    }
 
 </style>
 

@@ -50,3 +50,57 @@ input[readonly], textarea[readonly], select:disabled {
     background: #f5f5f7;
     opacity: 0.8;
 }
+
+
+.floating-label-container {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.floating-label-container label {
+    position: absolute;
+    width: calc(100% - 1rem);
+    top: 6px;
+    left: 0;
+    z-index: 1;
+    pointer-events: none; 
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+    padding: 0.5rem;
+    color: #808080;
+    font-size: 0.9rem;
+}
+
+input.active ~ label, 
+select.active ~ label, 
+textarea.active ~ label {
+    top: -4px;
+    font-size: 0.8rem;
+    color:#808080
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #3681ff;
+    outline: none;
+    box-shadow: 0 0 0px 1px #cfe0ff;
+}
+
+input:focus ~ label, 
+select:focus ~ label,
+textarea:focus ~ label {
+    color:#3681ff;
+}
+
+textarea {
+    padding: 20px 6px 7px 6px;
+    font-size: 13px;
+    height: 110px;
+}
+
+input, select {
+    padding: 20px 6px 7px 6px;
+    font-size: 13px;
+}
