@@ -1,0 +1,52 @@
+@import '../variables/colorVariables.scss';
+@import '../variables/coreVariables.scss';
+
+input, button, textarea, select {
+    font-family: inherit;
+}
+
+select, input[type="checkbox"], input[type="radio"] {
+    cursor: pointer;
+}
+
+
+/****************************/
+/********** INPUT **********/
+/**************************/
+
+/****************************/
+/********* SELECT **********/
+/**************************/
+
+/****************************/
+/****** CHECKS E RADIO *****/
+/**************************/
+
+/****************************/
+/********* TEXTAREA ********/
+/**************************/
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+
+//***** READONLY / DISABLED ******//
+input[readonly], 
+input[type="checkbox"]:disabled, 
+input[type="radio"]:disabled, 
+input[type="date"]:read-only, 
+textarea[readonly],
+select:disabled,
+button:disabled,
+label.label-check[readonly], 
+label.label-radio[readonly],
+input[type="checkbox"]:disabled ~ .slider.round {
+    cursor: not-allowed;
+}
+
+
+input[readonly], textarea[readonly], select:disabled {
+    background: #f5f5f7;
+    opacity: 0.8;
+}
