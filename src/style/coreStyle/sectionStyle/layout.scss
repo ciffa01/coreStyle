@@ -104,27 +104,27 @@ $base-gap: 0.5rem;
 //****************************//
 //******** CONTAINER ********//
 //**************************//
-.container {
+.cnt {
     max-width: 100%;
 }
 
-.container-m {
+.cnt-m {
     max-width: 100%;
 }
 
-.container-l {
+.cnt-l {
     max-width: 100%;
 }
 
-.container-xl {
+.cnt-xl {
     max-width: 100%;
 }
 
-.container-xxl {
+.cnt-xxl {
     max-width: 100%;
 }
 
-.container-100 {
+.cnt-100 {
     width: 100%;
 }
 
@@ -133,7 +133,7 @@ $base-gap: 0.5rem;
 
 //Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
-    .container {
+    .cnt {
         max-width: 540px;
     }
     
@@ -141,7 +141,7 @@ $base-gap: 0.5rem;
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-    .container, .container-m {
+    .cnt, .cnt-m {
         max-width: 720px;
     }
 
@@ -149,7 +149,7 @@ $base-gap: 0.5rem;
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
-    .container, .container-m, .container-l {
+    .cnt, .cnt-m, .cnt-l {
         max-width: 960px;
     }
 
@@ -157,7 +157,7 @@ $base-gap: 0.5rem;
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
-    .container, .container-m,.container-l, .container-xl {
+    .cnt, .cnt-m,.cnt-l, .cnt-xl {
         max-width: 1140px;
     }
 
@@ -165,7 +165,7 @@ $base-gap: 0.5rem;
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) { 
-    .container, .container-m,  .container, .container-m,.container-l, .container-xxl {
+    .cnt, .cnt-m,  .cnt, .cnt-m,.cnt-l, .cnt-xxl {
         max-width: 1320px;
     }
     

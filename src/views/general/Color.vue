@@ -9,14 +9,7 @@
         <!-- <div class="item-color-theme bg-black-70">10</div>
         <div class="item-color-theme bg-black-70">20</div>  -->
 
-        <div class="container-color-theme flex f-row gap-s">
-            <form class="go-bottom">
-                <div>
-                    <input id="name" name="name" type="text" required>
-                    <label for="name">Your Name</label>
-                </div>
-            </form>
-        </div>
+        
         <!-- <div class="container-color-theme c-flex flex-column  gap-0_3">
             <div class="item-color-theme bg-black-10">10</div>
             <div class="item-color-theme bg-black-20">20</div>
@@ -111,6 +104,101 @@
             <div class="item-color-theme orange-primary">primary</div>
 
         </div> -->
+
+        <!-- <div class="container-color-theme flex f-row gap-xl">
+            <div class="flex f-column gap-s">
+                <div class="cnt-floating-label">
+                    <input class="floating-input" type="text" placeholder=" ">
+                    <label class="floating-label">Prova</label>
+                </div>
+
+                <div class="cnt-floating-label">
+                    <select 
+                        class="floating-select" 
+                        onclick="this.setAttribute('value', this.value)" 
+                        value="">
+                        <option value=""></option>
+                        <option value="2">ciao sono simone</option>
+                        <option value="3">ciso sono mario rossi</option>
+                    </select>
+                    <label class="floating-label">Prova</label>
+                </div>
+
+                <div class="cnt-floating-label">
+                    <textarea class="floating-textarea" placeholder=" "></textarea>
+                    <label class="floating-label">Prova</label>
+                </div>
+            </div>
+
+            <div class="flex f-column gap-s">
+                <div class="cnt-floating-label">
+                    <input class="floating-input-100" type="text" placeholder="dadsa">
+                    <label class="floating-label-100">Prova</label>
+                </div>
+
+                <div class="cnt-floating-label">
+                    <select 
+                        class="floating-select-100" 
+                        onclick="this.setAttribute('value', this.value);" 
+                        value="">
+                        <option value=""></option>
+                        <option value="2">ciao sono simone</option>
+                        <option value="3">ciso sono mario rossi</option>
+                    </select>
+                    <label class="floating-label-100">Prova</label>
+                </div>
+
+                <div class="cnt-floating-label">
+                    <textarea class="floating-textarea-100" name="" id="" placeholder=" "></textarea>
+                    <label class="floating-label-100">Prova</label>
+                </div>
+            </div>
+
+            <div class="flex f-column gap-s">
+                <div class="cnt-floating-label">
+                    <input class="floating-input-bottom" type="text" placeholder="fdsfds ">
+                    <label class="floating-label-bottom">Prova</label>
+                </div>
+
+                <div class="cnt-floating-label">
+                    <select 
+                        class="floating-select-bottom" 
+                        onclick="this.setAttribute('value', this.value);" 
+                        value="">
+                        <option value=""></option>
+                        <option value="2">ciao sono simone</option>
+                        <option value="3">ciso sono mario rossi</option>
+                    </select>
+                    <label class="floating-label-bottom">Prova</label>
+                </div>
+
+                <div class="cnt-floating-label">
+                    <textarea class="floating-textarea-bottom" name="" id="" placeholder=" "></textarea>
+                    <label class="floating-label-bottom">Prova</label>
+                </div>
+
+                <input type="text" class="default-input">
+            </div>
+        </div> -->
+
+        <div class="container-color-theme flex f-row gap-xs">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="text-15p text-left">prova</span>
+        </div>
+
+        <div class="container-color-theme flex f-row gap-xs">
+            <input type="checkbox">
+            <span>prova</span>
+        </div>
+
+        <div class="container-color-theme flex f-row gap-xs">
+            <input type="radio">
+            <span>prova</span>
+        </div>
+
     </div>
 </template>
 
@@ -120,72 +208,10 @@
         padding: 1.2rem 3rem;
         color: #fff;
         border-radius: 5px;
-        width: 130px;
+        width: 100%;
         text-align: center;
     }
 
-    form {
-        > div {
-            position: relative;
-            overflow: hidden;
-        }
-        input {
-            width: 100%;
-            border: 2px solid gray; 
-            background: none;
-            position: relative;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            padding: 8px 12px;
-            outline: 0;
-
-           /*  &:valid {
-            // Hides the label
-                background: white; 
-            } */
-            &:focus {
-                border-color: #f06d06;
-            }
-            &:focus + label {
-                background: #f06d06;
-                color: white;
-                font-size: 70%;
-                padding: 1px 6px;
-                z-index: 2;
-                text-transform: uppercase;
-            }
-        }
-
-        label {
-            position: absolute;
-            color: #999;
-            padding: 7px 6px;
-        }
-   
-    }
-
-    form.go-bottom {
-        input {
-            padding: 12px 12px 12px 12px; 
-        }
-
-        label {
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
-
-        input:focus {
-            padding: 4px 6px 20px 6px; 
-        }
-        
-        input:focus + label {
-            top: 100%;
-            margin-top: -16px;
-        }
-    }
-
+    
 </style>
 
