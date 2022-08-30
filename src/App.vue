@@ -13,6 +13,6 @@
 	/* @import url("./style/custom.css"); */
 
 	.section-page {
-        margin: 2rem auto 2rem 2rem;
+        margin: 2rem;
     }
 </style>

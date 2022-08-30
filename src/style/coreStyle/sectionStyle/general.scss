@@ -43,9 +43,10 @@ p {
 //**** Size ****//
 $base-text-size: 1rem; //16px
 $base-title-size: 2.5rem; //32px
+$i: 0;
 
 @each $name, $s in $size {
-    $i: index($size, $s);
+    $i: $i + 1;
 
     @if $i != 1 {
         $base-text-size: $base-text-size+0.25;
@@ -132,9 +133,11 @@ $base-title-size: 2.5rem; //32px
 //******** SPACING **********//
 //**************************//
 $base-spacing: 0.5rem;
-
+/* $base-s: 0.5rem; */
+$i: 0;
 @each $name, $s in $size {
-    $i: index($size, $s);
+    // $ok: index($size, $s);
+    $i: $i+1;
 
     @if $i != 1 {
         $base-spacing: $base-spacing+0.5;
