@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <div class="flex f-row-s f-justify-center f-align-center f-wrap-l gap-l">
+    <div class="flex f-row-s f-wrap-l gap-l">
 
         <div class="card flex f-column gap-xs cnt-s">
             <span class="text-m weight-500">Prova</span>

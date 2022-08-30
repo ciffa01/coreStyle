@@ -44,6 +44,8 @@
         position: sticky;
         height: calc(100vh - 6rem);
         overflow-y: auto;
+        max-width: 380px;
+        box-shadow: 2px 0px 7px -2px #acacac;
     }
 
     .content-second-title {
