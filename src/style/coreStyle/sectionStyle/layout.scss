@@ -88,8 +88,9 @@
 
 //*** gap **//
 $base-gap: 0.5rem;
+$i:0;
 @each $name, $s in $size {
-    $i: index($size, $s);
+    $i: $i + 1;
 
     @if $i != 1 {
         $base-gap: $base-gap+0.5;
