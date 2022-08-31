@@ -17,6 +17,10 @@ p {
         .bg-#{$name}-#{$count*100} {
             background-color: darken($color, ($count*10%)-10);
         }
+
+        .text-#{$name}-#{$count*100} {
+            color: darken($color, ($count*10%)-10);
+        }
     }
     .#{$name}-primary {
         background-color: darken($color, 40%);
@@ -25,6 +29,10 @@ p {
     .text-#{$name}-primary {
         color: darken($color, 40%);
     }
+
+   
+
+
 }
 
 .text-white {

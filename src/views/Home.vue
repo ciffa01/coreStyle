@@ -1,6 +1,6 @@
-<script lang="ts" setup>
+<script>
 
-</script>select
+</script>
 <template>
     <div class="flex f-row-s f-wrap-l gap-l">
 
@@ -47,7 +47,7 @@
             </div>
         </div>
 
-        <div class="card flex f-column gap-xs cnt-s">
+        <div class="card flex f-column gap-s cnt-s">
             <span class="text-m weight-500">Prova</span>
             <div class="flex f-row-xs gap-s">
                 <div class="cnt-floating-label">
@@ -176,6 +176,7 @@
             </div>
         </div>
     </div>
+
 </template>
 
 
