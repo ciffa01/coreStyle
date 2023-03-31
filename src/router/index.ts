@@ -11,18 +11,18 @@ const routes = [
     component: Home,
   },
   {
-    path: "/Body",
-    name: "Body",
+    path: "/body",
+    name: "body",
     component: Body,
   },
   {
-    path: "/Colori",
-    name: "Colori",
+    path: "/color",
+    name: "color",
     component: Color,
   },
   {
-    path: "/Font",
-    name: "Font",
+    path: "/font",
+    name: "font",
     component: Fonts,
   },
 ]

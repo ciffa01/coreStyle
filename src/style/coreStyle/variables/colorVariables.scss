@@ -1,117 +1,181 @@
-$baseColor: (
-    black:      #f8f9fa,
-    blue:       #cfe2ff,
-    red:        #f8d7da,
-    yellow:     #fff3cd,
-    green:      #d1e7dd,
-    lightblue:  #cff4fc,
-    orange:     #ffe5d0,
-    white:      #fff,
+$nameColor: (
+    black:  'black',
+    gray:   'gray',
+    blue:   'blue',
+    red:    'red',
+    yellow: 'yellow',
+    green:  'green',
 );
 
-/**** Base color ****/
-$base-black:#f8f9fa;
-$base-blue:#cfe2ff;
-$base-red:#f8d7da;
-$base-yellow:#fff3cd;
-$base-green:#d1e7dd;
-$base-lightblue:#cff4fc;
-$base-orange:#ffe5d0;
-$white: #fff;
-$transparent: transparent;
+$sizeColor: (
+    100: 100,
+    200: 200,
+    300: 300,
+    400: 400,
+    500: 500,
+    600: 600,
+    700: 700,
+    800: 800,
+);
 
+/******************************
+************ BLACK ************
+*******************************/
+$black-100: #F1F3F5;
+$black-200: #DEE2E6;
+$black-300: #CFD4DA;
+$black-400: #ADB5BD;
+$black-500: #868E96;
+$black-600: #495057;
+$black-700: #343a40;
+$black-800: #21252A;
 
-$black-100: darken( $base-black, 0% );
-$black-200: darken( $base-black, 10% );
-$black-300: darken( $base-black, 20% );
-$black-400: darken( $base-black, 30% );
-$black-500: darken( $base-black, 40% );
-$black-600: darken( $base-black, 50% );
-$black-700: darken( $base-black, 60% );
-$black-800: darken( $base-black, 70% );
-$black-900: darken( $base-black, 80% );
+$black: (
+    black-100: $black-100,
+    black-200: $black-200,
+    black-300: $black-300,
+    black-400: $black-400,
+    black-500: $black-500,
+    black-600: $black-600,
+    black-700: $black-700,
+    black-800: $black-800,
+);
 
-$blue-100: darken( $base-blue, 0% );
-$blue-200: darken( $base-blue, 10% );
-$blue-300: darken( $base-blue, 20% );
-$blue-400: darken( $base-blue, 30% );
-$blue-500: darken( $base-blue, 40% );
-$blue-600: darken( $base-blue, 50% );
-$blue-700: darken( $base-blue, 60% );
-$blue-800: darken( $base-blue, 70% );
-$blue-900: darken( $base-blue, 80% );
+/******************************
+************ GRAY *************
+*******************************/
+$gray-100: #E8EDF2;
+$gray-200: #B4C2D0;
+$gray-300: #778CA1;
+$gray-400: #4C6175;
+$gray-500: #304254;
+$gray-600: #12283A;
 
-$red-100: darken( $base-red, 0%  );
-$red-200: darken( $base-red, 10% );
-$red-300: darken( $base-red, 20% );
-$red-400: darken( $base-red, 30% );
-$red-500: darken( $base-red, 40% );
-$red-600: darken( $base-red, 50% );
-$red-700: darken( $base-red, 60% );
-$red-800: darken( $base-red, 70% );
-$red-900: darken( $base-red, 80% );
+$gray: (
+    gray-100: $gray-100,
+    gray-200: $gray-200,
+    gray-300: $gray-300,
+    gray-400: $gray-400,
+    gray-500: $gray-500,
+    gray-600: $gray-600,
+);
 
-$yellow-100: darken( $base-yellow, 0%  );
-$yellow-200: darken( $base-yellow, 10% );
-$yellow-300: darken( $base-yellow, 20% );
-$yellow-400: darken( $base-yellow, 30% );
-$yellow-500: darken( $base-yellow, 40% );
-$yellow-600: darken( $base-yellow, 50% );
-$yellow-700: darken( $base-yellow, 60% );
-$yellow-800: darken( $base-yellow, 70% );
-$yellow-900: darken( $base-yellow, 80% );
+/******************************
+************ BLUE *************
+*******************************/
+$blue-100: #EFF8FF;
+$blue-200: #AAD4F5;
+$blue-300: #63A2D8;
+$blue-400: #3183C8;
+$blue-500: #035DE6;
+$blue-600: #0353CC;
+$blue-700: #033E99;
+$blue-800: #00204F;
 
-$green-100: darken( $base-green, 0%  );
-$green-200: darken( $base-green, 10% );
-$green-300: darken( $base-green, 20% );
-$green-400: darken( $base-green, 30% );
-$green-500: darken( $base-green, 40% );
-$green-600: darken( $base-green, 50% );
-$green-700: darken( $base-green, 60% );
-$green-800: darken( $base-green, 70% );
-$green-900: darken( $base-green, 80% );
+$blue: (
+    blue-100: $blue-100,
+    blue-200: $blue-200,
+    blue-300: $blue-300,
+    blue-400: $blue-400,
+    blue-500: $blue-500,
+    blue-600: $blue-600,
+    blue-700: $blue-700,
+    blue-800: $blue-800,
+);
 
-$lightblue-100: darken( $base-lightblue, 0%  );
-$lightblue-200: darken( $base-lightblue, 10% );
-$lightblue-300: darken( $base-lightblue, 20% );
-$lightblue-400: darken( $base-lightblue, 30% );
-$lightblue-500: darken( $base-lightblue, 40% );
-$lightblue-600: darken( $base-lightblue, 50% );
-$lightblue-700: darken( $base-lightblue, 60% );
-$lightblue-800: darken( $base-lightblue, 70% );
-$lightblue-900: darken( $base-lightblue, 80% );
+/******************************
+************* RED *************
+*******************************/
+$red-100: #FCE8E8;
+$red-200: #F4AAAA;
+$red-300: #E36363;
+$red-400: #DC3030;
+$red-500: #B82020;
+$red-600: #881a1b;
+$red-700: #5f1717;
 
-$green-100: darken( $base-green, 0%  );
-$green-200: darken( $base-green, 10% );
-$green-300: darken( $base-green, 20% );
-$green-400: darken( $base-green, 30% );
-$green-500: darken( $base-green, 40% );
-$green-600: darken( $base-green, 50% );
-$green-700: darken( $base-green, 60% );
-$green-800: darken( $base-green, 70% );
-$green-900: darken( $base-green, 80% );
+$red: (
+    red-100: $red-100,
+    red-200: $red-200,
+    red-300: $red-300,
+    red-400: $red-400,
+    red-500: $red-500,
+    red-600: $red-600,
+    red-700: $red-700,
+);
 
-$orange-100: darken( $base-orange, 0%  );
-$orange-200: darken( $base-orange, 10% );
-$orange-300: darken( $base-orange, 20% );
-$orange-400: darken( $base-orange, 30% );
-$orange-500: darken( $base-orange, 40% );
-$orange-600: darken( $base-orange, 50% );
-$orange-700: darken( $base-orange, 60% );
-$orange-800: darken( $base-orange, 70% );
-$orange-900: darken( $base-orange, 80% );
+/******************************
+*********** YELLOW ************
+*******************************/
+$yellow-100: #FFFCF4;
+$yellow-200: #FDF3D7;
+$yellow-300: #FAE29F;
+$yellow-400: #F4CA64;
+$yellow-500: #CAA53D;
+$yellow-600: #8C6D1F;
+$yellow-700: #5c4813;
+
+$yellow: (
+    yellow-100: $yellow-100,
+    yellow-200: $yellow-200,
+    yellow-300: $yellow-300,
+    yellow-400: $yellow-400,
+    yellow-500: $yellow-500,
+    yellow-600: $yellow-600,
+    yellow-700: $yellow-700,
+);
+
+/******************************
+************ GREEN ************
+*******************************/
+$green-100: #E3FCEC;
+$green-200: #A8EEC1;
+$green-300: #74D99F;
+$green-400: #38C172;
+$green-500: #249d57;
+$green-600: #187741;
+$green-700: #155239;
+
+$green: (
+    green-100: $green-100,
+    green-200: $green-200,
+    green-300: $green-300,
+    green-400: $green-400,
+    green-500: $green-500,
+    green-600: $green-600,
+    green-700: $green-700,
+);
+
 
 /**** Hover action ****/
-$hover-action: $black-200;
+$hover-action: $black-100;
 
-/**** Color theme ****/
-$black-primary:     $black-500;
-$blue-primary:      $blue-500;
-$red-primary:       $red-500;
-$yellow-primary:    $yellow-500;
-$green-primary:     $green-500;
-$gray-primary:      $black-300;
-$lightblue-primary: $lightblue-500;
+/******************************
+*********** PRIMARY ***********
+*******************************/
+$black-primary:     $black-600;
+$blue-primary:      $blue-600;
+$red-primary:       $red-400;
+$yellow-primary:    $yellow-400;
+$green-primary:     $green-400;
+$gray-primary:      $black-400;
+
+$colorPrimary: (
+    black:  $black-primary,
+    gray:   $gray-primary,  
+    blue:   $blue-primary,  
+    red:    $red-primary,
+    yellow: $yellow-primary,
+    green:  $green-primary,
+);
+
+/******************************
+*********** STATUS ************
+*******************************/
+$dangerous: $red-400;
+$warning:   $yellow-400;
+$success:   $green-400;
+$info:      $blue-500;
 
 
 

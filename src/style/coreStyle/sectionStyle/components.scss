@@ -1,5 +1,6 @@
 @import '../variables/colorVariables.scss';
 @import '../variables/coreVariables.scss';
+@import '../variables/font.scss';
 
 .card {
     background-color: #fff;
@@ -16,44 +17,60 @@ button {
     cursor: pointer;
 }
 
+.btn {
+	padding: 0.4rem 0.8rem;
+	border: 1px solid $black-300;
+	font-weight: 500;
+	background-color: $black-300;
+	color: $black-700;
+	font-size: $font-13;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.btn-l {
+	font-size: $font-15;
+	padding: 0.5rem 1rem;
+}
+
+
+.btn-s {
+	font-size: $font-12;
+	padding: 0.25rem 0.5rem;
+}
+
 .btn-icon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.3rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.3rem;
 }
 
-.btn-default {
-    font-size: 0.95rem;
-    padding: 0.7rem 1rem;
-    border: 2px solid;
-    border-radius: 6px;
-    font-weight: 500;
-}
-
-.btn-default:hover {
-    opacity: 0.8;
-}
-
-@each $name, $color in $baseColor {
+@each $name, $color in $colorPrimary {
     .btn-#{$name}-primary {
-        background-color: darken($color, 40%);
-        border-color: $transparent;
-        box-shadow: 0px 0px 12px 1px #bfbfbf78;
-    }
+		background-color: $color;
+		border-color: transparent;
+		color: #fff;
+	}
 
     .btn-#{$name}-secondary {
-        background-color: $transparent;
-        color: darken($color, 40%);
-        border-color: darken($color, 40%);
-    }
+		background-color: transparent;
+		color: $color;
+		border-color: $color;
+		font-weight: 600;
+	}
 
     .btn-#{$name}-tertiary {
-        background-color: $transparent;
-        border-color: $transparent;
-        color: darken($color, 40%);
-        text-decoration: underline;
-    }
+		background-color: transparent;
+		border-color: transparent;
+		color: $color;
+
+		&.link {
+			text-decoration: underline;
+		}
+	}
 }
 
 

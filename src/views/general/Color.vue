@@ -15,7 +15,15 @@
             <div class="item-color-theme bg-black-600">600</div>
             <div class="item-color-theme bg-black-700">700</div>
             <div class="item-color-theme bg-black-800">800</div>
-            <div class="item-color-theme bg-black-900">900</div>
+        </div>
+
+        <div class="container-color-theme flex f-column">
+            <div class="item-color-theme bg-gray-100">100</div>
+            <div class="item-color-theme bg-gray-200">200</div>
+            <div class="item-color-theme bg-gray-300">300</div>
+            <div class="item-color-theme bg-gray-400">400</div>
+            <div class="item-color-theme bg-gray-500">500</div>
+            <div class="item-color-theme bg-gray-600">600</div>
         </div>
 
         <div class="container-color-theme flex f-column">
@@ -27,7 +35,6 @@
             <div class="item-color-theme bg-blue-600">600</div>
             <div class="item-color-theme bg-blue-700">700</div>
             <div class="item-color-theme bg-blue-800">800</div>
-            <div class="item-color-theme bg-blue-900">900</div>
         </div>
 
         <div class="container-color-theme flex f-column">
@@ -38,8 +45,6 @@
             <div class="item-color-theme bg-red-500">500</div>
             <div class="item-color-theme bg-red-600">600</div>
             <div class="item-color-theme bg-red-700">700</div>
-            <div class="item-color-theme bg-red-800">800</div>
-            <div class="item-color-theme bg-red-900">900</div>
         </div>
 
         <div class="container-color-theme flex f-column">
@@ -50,8 +55,6 @@
             <div class="item-color-theme bg-green-500">500</div>
             <div class="item-color-theme bg-green-600">600</div>
             <div class="item-color-theme bg-green-700">700</div>
-            <div class="item-color-theme bg-green-800">800</div>
-            <div class="item-color-theme bg-green-900">900</div>
         </div>
 
         <div class="container-color-theme flex f-column">
@@ -62,43 +65,14 @@
             <div class="item-color-theme bg-yellow-500">500</div>
             <div class="item-color-theme bg-yellow-600">600</div>
             <div class="item-color-theme bg-yellow-700">700</div>
-            <div class="item-color-theme bg-yellow-800">800</div>
-            <div class="item-color-theme bg-yellow-900">900</div>
         </div>
 
-        <div class="container-color-theme flex f-column">
-            <div class="item-color-theme bg-lightblue-100">100</div>
-            <div class="item-color-theme bg-lightblue-200">200</div>
-            <div class="item-color-theme bg-lightblue-300">300</div>
-            <div class="item-color-theme bg-lightblue-400">400</div>
-            <div class="item-color-theme bg-lightblue-500">500</div>
-            <div class="item-color-theme bg-lightblue-600">600</div>
-            <div class="item-color-theme bg-lightblue-700">700</div>
-            <div class="item-color-theme bg-lightblue-800">800</div>
-            <div class="item-color-theme bg-lightblue-900">900</div>
-        </div>
 
         <div class="container-color-theme flex f-column">
-            <div class="item-color-theme bg-orange-100">100</div>
-            <div class="item-color-theme bg-orange-200">200</div>
-            <div class="item-color-theme bg-orange-300">300</div>
-            <div class="item-color-theme bg-orange-400">400</div>
-            <div class="item-color-theme bg-orange-500">500</div>
-            <div class="item-color-theme bg-orange-600">600</div>
-            <div class="item-color-theme bg-orange-700">700</div>
-            <div class="item-color-theme bg-orange-800">800</div>
-            <div class="item-color-theme bg-orange-900">900</div>
-        </div>
-
-        <div class="container-color-theme flex f-column">
-            <div class="item-color-theme blac-primary">primary</div>
-            <div class="item-color-theme blue-primary">primary</div>
-            <div class="item-color-theme red-primary">primary</div>
-            <div class="item-color-theme green-primary">primary</div>
-            <div class="item-color-theme yellow-primary">primary</div>
-            <div class="item-color-theme lightblue-primary">primary</div>
-            <div class="item-color-theme orange-primary">primary</div>
-
+            <div class="item-color-theme bg-dangerous">primary</div>
+            <div class="item-color-theme bg-success">primary</div>
+            <div class="item-color-theme bg-info">primary</div>
+            <div class="item-color-theme bg-warning">primary</div>
         </div>
     </div>
 
@@ -107,12 +81,18 @@
 
 <style setup lang="scss">
 
+    .container-color-theme {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     .item-color-theme {
         padding: 1.2rem 3rem;
         color: #fff;
-        border-radius: 5px;
         width: 80px;
         text-align: center;
+        box-shadow: 0px 0px 2px 1px #dcdcdc;
     }
 
     

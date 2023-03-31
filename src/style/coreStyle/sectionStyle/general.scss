@@ -12,31 +12,55 @@ p {
 //****************************//
 //********** COLOR **********//
 //**************************//
-@each $name, $color in $baseColor {
-    @for $count from 1 to 10 {
-        .bg-#{$name}-#{$count*100} {
-            background-color: darken($color, ($count*10%)-10);
-        }
 
-        .text-#{$name}-#{$count*100} {
-            color: darken($color, ($count*10%)-10);
-        }
+@each $nameColor, $color in $black {
+    .bg-#{$nameColor} {
+        background-color: $color;
     }
-    .#{$name}-primary {
-        background-color: darken($color, 40%);
+}
+@each $nameColor, $color in $gray {
+    .bg-#{$nameColor} {
+        background-color: $color;
     }
-
-    .text-#{$name}-primary {
-        color: darken($color, 40%);
+}
+@each $nameColor, $color in $blue {
+    .bg-#{$nameColor} {
+        background-color: $color;
     }
-
-   
-
-
+}
+@each $nameColor, $color in $red {
+    .bg-#{$nameColor} {
+        background-color: $color;
+    }
+}
+@each $nameColor, $color in $yellow {
+    .bg-#{$nameColor} {
+        background-color: $color;
+    }
+}
+@each $nameColor, $color in $green {
+    .bg-#{$nameColor} {
+        background-color: $color;
+    }
+}
+.bg-dangerous {
+    background-color: $dangerous;
+}
+.bg-warning {
+    background-color: $warning;
+}
+.bg-success{
+    background-color: $success;
+}
+.bg-info {
+    background-color: $info;
+}
+.bg-white {
+    background-color: #fff;
 }
 
 .text-white {
-    color: $white;
+    color: #fff;
 }
 
 .bg-transparent {
