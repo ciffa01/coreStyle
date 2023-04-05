@@ -1,8 +1,24 @@
-@import '../variables/colorVariables.scss';
-@import '../variables/coreVariables.scss';
-
-input, button, textarea, select {
+@import '../variables/color.scss';
+@import '../variables/core.scss';
+@import '../variables/font.scss';
+/*********************************************/
+/*********** INPUT/SELECT/TEXTAREA **********/
+/*******************************************/
+input, select, textarea {
     font-family: inherit;
+    font-size: $font-14;
+    width: 100%;
+    background: #fff;
+    color: $black-800;
+    box-sizing: border-box;
+    border: 1px solid $black-400;
+    padding: 0.4rem;
+
+    &:focus{
+        outline: none;
+        border: 1px solid transparent;
+        outline: 1px solid $blue-primary;
+    }
 }
 
 textarea {
@@ -10,213 +26,246 @@ textarea {
     height: 100px;
 }
 
-.cnt-element-form {
+.input-column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.2rem;
-}
+    gap: 0.3rem;
 
-.cnt-element-form label {
-    font-size: 0.9rem;
-    columns: $black-600;
-    font-weight: 500;
-}
+    input {
+        padding: 0.4rem;
+    }
 
-
-/*********************************************/
-/*********** INPUT/SELECT/TEXTAREA **********/
-/*******************************************/
-.cnt-floating-label { 
-    position:relative;
-}
-
-::-webkit-input-placeholder {
-    opacity: 0;
-}
-
-input:focus::-webkit-input-placeholder {
-    opacity: 1;
-}
-
-.cnt-floating-label label {
-    color: $black-800;
-    font-size: 1rem;
-    position: absolute;
-    pointer-events: none;
-    background: #fff;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-input, select, textarea {
-    font-size: 0.9rem;
-    width: 100%;
-    background: #fff;
-    color: #323840;
-    box-sizing: border-box;
-
-    &:focus{
-        outline: none;
-        border: 1px solid #3681ff;
-        box-shadow: 0 0 0px 1px #cfe0ff;
-        ~ .floating-label, ~ .floating-label-100, ~ .floating-label-bottom {
-            font-size: 13px;
-            color:#3681ff;
-            font-weight: 500;
-        }
+    label {
+        font-size: $font-12;
+        color: $black-800;
+        font-weight: 500;
     }
 }
 
-.default-input {
-    border: 1px solid $black-400;
-    border-radius: 4px;
-    padding: 0.5rem;
-    font-size: 0.9rem;
+/*********** FLOATING LABEL **********/
+.cnt-floating-label {
+    position:relative;
+
+    ::-webkit-input-placeholder {
+        opacity: 0;
+    }
+    
+    input:focus::-webkit-input-placeholder {
+        opacity: 1;
+    }
+
+    label {
+        color: $black-700;
+        font-size: $font-13;
+        position: absolute;
+        pointer-events: none;
+        background: #fff;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    input, select, textarea {
+        &:focus{
+            ~ label {
+                font-size: $font-12;
+                color:$blue-primary;
+                font-weight: 500;
+            }
+        }
+    }
+
+    input:not(:placeholder-shown) ~ label,
+    textarea:not(:placeholder-shown) ~ label, 
+    select:not([value=""]):valid ~ label,
+    select[value=""]:focus ~ label {
+        font-size: $font-12;
+        font-weight: 500;
+    }
 }
 
+/***************************
+******* Label OUTSIDE  ******
+****************************/
+.cnt-floating-label {
+    &.outside  {
+        input, select, textarea {
+            padding: 0.6rem 0.5rem;
+            &:focus{
+                ~ label {
+                    top: -8px;
+                    left: 12px; 
+                }
+            }
+        }
 
-//*** Label over border  ***//
-.floating-label {
-    left: 12px;
-    top: 10px;
-}
-
-.floating-input, 
-.floating-select, 
-.floating-textarea {
-    padding: 0.7rem 0.85rem;
-    border: 1px solid $black-400;
-    border-radius: 4px;
-
-    &:focus{
-        outline:none;
-        ~ .floating-label {
+        input:not(:placeholder-shown) ~ label,
+        textarea:not(:placeholder-shown) ~ label,
+        select:not([value=""]):valid ~ label,
+        select[value=""]:focus ~ label {
             top: -8px;
             left: 12px;
-            padding: 0 0.2rem;
         }
-    }
-}
 
-.floating-input:not(:placeholder-shown) ~ label,
-.floating-textarea:not(:placeholder-shown) ~ label {
-    top: -8px;
-    left: 12px;
-    font-size: 13px;
-    padding: 0 0.2rem;
-    font-weight: 500;
-}
-
-
-.floating-select:not([value=""]):valid ~ label,
-.floating-select[value=""]:focus ~ label {
-    top: -8px;
-    left: 12px;
-    font-size: 13px;
-    padding: 0 0.2rem;
-    font-weight: 500;
-}
-
-
-//*** Label inside input  ***//
-.floating-label-100 {
-    left: 12px;
-    top: 12px;
-}
-
-.floating-input-100, 
-.floating-select-100, 
-.floating-textarea-100 { 
-    padding: 1.2rem 0.5rem 0.4rem 0.6rem;
-    border: 1px solid $black-400;
-    border-radius: 4px;
-
-    &:focus{
-        padding: 1.2rem 0.5rem 0.4rem 0.6rem;
-        ~ .floating-label-100 {
-            top: 4px;
+        label {
             left: 10px;
+            top: 10px;
         }
     }
 }
 
-.floating-input-100:not(:placeholder-shown) ~ label, 
-.floating-textarea-100:not(:placeholder-shown) ~ label  {
-    top: 4px;
-    left: 10px;
-    font-size: 13px;
-    font-weight: 500;
+/***************************
+******* Label INSIDE  ******
+****************************/
+.cnt-floating-label {
+    &.inside  {
+        input, select, textarea {
+            padding: 1.2rem 0.5rem 0.3rem 0.5rem;
+            &:focus{
+                ~ label {
+                    top: 4px;
+                }
+            }
+        }
+
+        input:not(:placeholder-shown) ~ label,
+        textarea:not(:placeholder-shown) ~ label {
+            top: 4px;
+        }
+
+        select:not([value=""]):valid ~ label,
+        select[value=""]:focus ~ label {
+            top: 4px;
+            left: 13px;
+        }
+
+        label {
+            left: 8px;
+            top: 12px;
+        }
+    }
 }
 
-.floating-select-100:not([value=""]):valid ~ label,
-.floating-select-100[value=""]:focus ~ label  {
-    top: 4px;
-    left: 10px;
-    font-size: 13px;
-    font-weight: 500;
-}
 
+/***************************
+******* LINE BOTTOM ******
+****************************/
+.cnt-floating-label {
+    &.line-bottom  {
+        input, select, textarea {
+            padding: 1.2rem 0.5rem 0.3rem 0.3rem;
+            border: none;
+            border-bottom: 1px solid $black-400;
 
-//*** Input border bottom  ***//
-.floating-label-bottom {
-    left: 5px;
-    top: 16px;
-}
+            &:focus{
+                border: none;
+                border-bottom: 1px solid $blue-primary;
+                outline: none;
+                background-color: $black-100;
+                ~ label {
+                    top: 2px;
+                    background-color: $black-100;
+                }
+            }
+        }
 
-.floating-input-bottom, 
-.floating-select-bottom, 
-.floating-textarea-bottom {
-    padding: 1.2rem 0.5rem 0.3rem 0.3rem;
-    border: none;
-    border-bottom: 1px solid $black-400;
-    border-radius: 0px;
-
-    &:focus{
-        padding: 1.2rem 0.5rem 0.3rem 0.3rem;
-        border: none;
-        border-bottom: 1px solid #3681ff;
-        box-shadow: none;
-        ~ .floating-label-bottom {
+        input:not(:placeholder-shown) ~ label,
+        textarea:not(:placeholder-shown) ~ label {
             top: 2px;
-            left: 5px;
+        }
+
+        select:not([value=""]):valid ~ label,
+        select[value=""]:focus ~ label {
+            top: 2px;
+        }
+
+        label {
+            left: 4px;
+            top: 16px;
         }
     }
-}
-
-.floating-input-bottom:not(:placeholder-shown) ~ label,
-.floating-textarea-bottom:not(:placeholder-shown) ~ label {
-    top: 2px;
-    left: 5px;
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.floating-select-bottom:focus ~ label, 
-.floating-select-bottom:not([value=""]):valid ~ label {
-    top: 2px;
-    left: 5px;
-    font-size: 13px;
-    font-weight: 500;
 }
 
 /****************************/
 /****** CHECKS E RADIO *****/
 /**************************/
-input[type="checkbox"], input[type="radio"] {
+.check-row, .radio-row, .switch-row {
+    display: flex;
+    gap: 0.45rem;
     cursor: pointer;
-    width: 16px;
+
+    &.hover {
+        padding: 0.1rem 0.5rem 0.1rem 0.25rem;
+        &:hover {
+            background-color: $black-100;
+        }
+    }
+
+    label {
+        font-size: $font-14;
+        color: $black-800;
+        font-weight: 500;
+    }
+}
+
+.check-row, .radio-row, .switch-row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkbox, .radio {
     height: 16px;
+    width: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid $black-400;
+    outline: none;
+    cursor: pointer;
+    margin: 0;
+
+    &:focus {
+        border: 1px solid $black-400;
+        outline: none;
+    }
+
+    &:checked {
+        border: 1px solid $green-500;
+        background-color: $green-500;
+    }
 }
 
-input[type="checkbox"]:focus, input[type="radio"]:focus {
-    box-shadow: 0px 0px 1px 3px #cfe0ff;
-    border: 1px solid #3681ff;
+.radio {
+    border-radius: 50%;
 }
 
-input[type="radio"] {
-    border-radius: 10px;
+.checkbox:checked::before {
+    content: "";
+    /* content: '\2713'; */
+    display: block;
+    position: relative;
+    top: -6px;
+    left: -2px;
+    transform: rotate(45deg);
+    height: 9px;
+    width: 4px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.radio:checked::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: -3px;
+    left: -3px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    clip-path: circle(50px);
+    background: #fff;
 }
 
 /****************************/
@@ -225,39 +274,39 @@ input[type="radio"] {
 .switch {
     position: relative;
     display: inline-block;
-    width: 36px;
-    height: 21px;
-}
+    width: 34px;
+    height: 18px;
 
-.switch input { 
-    opacity: 0;
-    width: 100%;
-    box-sizing: border-box;
+    input { 
+        opacity: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 .slider {
     cursor: pointer;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 0px;
+    bottom: 0px;
     width: 100%;
     box-sizing: border-box;
-    background-color: $black-500;
-    border-radius: 34px;
-    transition: .2s;
-    -webkit-transition: .2s;
+    background-color: #868E96;
+    border-radius: 33px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     left: 4px;
     bottom: 3px;
     background-color: #fff;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
     border-radius: 50%;
 }
 
@@ -266,12 +315,12 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(13px);
+    transform: translateX(14px);
 }
 
-
-
-//***** READONLY / DISABLED ******//
+/*********************************************/
+/************ READONLY/DISABLED *************/
+/*******************************************/
 input[readonly], 
 input[type="checkbox"]:disabled, 
 input[type="radio"]:disabled, 

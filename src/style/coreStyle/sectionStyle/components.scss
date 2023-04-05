@@ -1,13 +1,13 @@
-@import '../variables/colorVariables.scss';
-@import '../variables/coreVariables.scss';
+@import '../variables/color.scss';
+@import '../variables/core.scss';
 @import '../variables/font.scss';
 
 .card {
     background-color: #fff;
-    border-radius: 10px;
-    padding: 1.5rem;
-    border: 1px solid transparent;
-    box-shadow: 0 2px 4px 0 #ccd0d9;
+	border-radius: 6px;
+	padding: 1rem;
+	//border: 1px solid transparent;
+	box-shadow: 0 2px 4px 0 #ccd0d9;
 }
 
 /****************************************/
@@ -73,6 +73,18 @@ button {
 	}
 }
 
+/****************************************/
+/*************** MODAL *****************/
+/**************************************/
+.wrapper-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #1f1d1dc2;
+	z-index: 9999;
+}
 
 /****************************/
 /********* TOOLTIP *********/
@@ -111,6 +123,80 @@ $base-icon-size: 16px;
     }
 }
 
+.icon-action {
+	border-radius: 50px;
+	padding: 0.2rem;
+	display: flex;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.8;
+		background-color: $black-200;
+	}
+}
+
+.icon-action-transparent {
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
 /****************************************/
 /*************** TABLES ****************/
 /**************************************/
+.table-default {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+
+    tr:first-child {
+        background-color: #d4d7dc;        
+        position: sticky;
+        top: 2.7rem;
+        border: 1px solid #d4d7dc;
+        z-index: 3;
+        th {
+            font-size: $font-15;
+            font-weight: 600;
+            color: #1e1e1e;
+            padding: 0.8rem 0.5rem !important;
+			text-align: left;
+
+            &:last-child {  
+                width: 5rem;
+            }
+        }
+
+        &:hover {
+            background-color: #e1e1e1;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid #e1e1e1;
+        &:hover {
+            background-color: $black-100;
+        }
+
+		td:last-child {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+    }
+
+    td {
+        padding: 0.5rem;
+        font-size: $font-14;
+        a {
+            color: #0f64fd;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+	
+}

@@ -1,5 +1,6 @@
-@import '../variables/colorVariables.scss';
-@import '../variables/coreVariables.scss';
+@import '../variables/color.scss';
+@import '../variables/core.scss';
+@import '../variables/font.scss';
 
 a {
     text-decoration: none;
@@ -73,8 +74,8 @@ p {
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap'); //Google Font: Kumbh Sans
 
 //**** Size ****//
-$base-text-size: 1rem; //16px
-$base-title-size: 2.5rem; //32px
+$base-text-size: 0.875rem; //14px
+$base-title-size: 2.25rem; //36px
 $i: 0;
 
 @each $name, $s in $size {
@@ -96,7 +97,7 @@ $i: 0;
 }
 
 //**** Weight ****//
-@for $count from 4 to 8 {
+@for $count from 3 to 8 {
     .weight-#{$count*100} {
         font-weight: $count*100;
     }

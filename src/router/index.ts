@@ -1,8 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue';
 import Color from '../views/general/Color.vue';
-import Body from '../views/general/Body.vue';
+import Button from '../views/general/Button.vue';
 import Fonts from '../views/general/Fonts.vue';
+import Input from '../views/general/Input.vue';
 
 const routes = [
   {
@@ -11,9 +12,9 @@ const routes = [
     component: Home,
   },
   {
-    path: "/body",
-    name: "body",
-    component: Body,
+    path: "/button",
+    name: "button",
+    component: Button,
   },
   {
     path: "/color",
@@ -24,6 +25,11 @@ const routes = [
     path: "/font",
     name: "font",
     component: Fonts,
+  },
+  {
+    path: "/input",
+    name: "input",
+    component: Input,
   },
 ]
 
